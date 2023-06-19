@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8" />
+    <head>
+        <title>Sis</title>
+        <link rel="stylesheet" href="style.css"></link>
+    </head>
+    <body>
+        <div id="header"><img id="flag" src="flag.png" /><h1 id="title">Sis</h1></div>
+        <div id="content">
+            <table class="toc">
+                <tr>
+                    <td><ul>
+                        <li><a href="#introduction">Introduction</a></li>
+                        <li><a href="#phonology">Phonology</a></li>
+                        <li><a href="#phonotactics">Phonotactics</a></li>
+                    </ul></td>
+                    <td><ul>
+                        <li><a href="#morphology">Morphology</a></li>
+                        <li><a href="#syntax">Syntax</a></li>
+                    </ul></td>
+                    <td><ul>
+                        <li><a href="#lexicon">Lexicon</a></li>
+                        <li><a href="#examples">Example sentences</a></li>
+                    </ul></td>
+                </tr>
+                <tr>
+                </tr>
+                <tr>
+                </tr>
+                <tr>
+                </tr>
+            </table>
+            <a name="introduction"></a>
+<h2>Introduction</h2>
+
+<p>
+Sis [sis] is a language that basically started from a single sound: I was procrastinating on work and thinking of sounds that I'd never thought to use in a conlang before, and hit on [ʘ↑ʷ] (imitate the sound of a bubble popping).
+</p>
+
+<p>
+I then decided I'd try to build a whole language in an hour around that sound. I failed at the hour-long time limit—it ended up taking me three and a half hours, not including time to edit and format this description, which I originally <a href="https://www.reddit.com/r/conlangs/comments/8dzc58">posted on Reddit</a> (there goes the time I had set aside for work, heh). But I really liked the result.
+</p>
+
+<p>
+Something else I did for this language was try to resist my instinct to make this language like other conlangs I had done before. My previous conlangs had had lots of voiced fricatives, {no|two|ridiculously many} cases, limited coda consonants, mostly head-final syntax, accusative alignment, and no gender or really any agreement to speak of. So this one's head-initial and ergative, has 5 cases, everything has agreement, voiced fricatives are out, arbitrary coda consonants and gender are in, etc. etc.
+</p>
+
+<a name="phonology"></a>
+<h2>Phonology</h2>
+
+<p>
+IPA is identical to orthography unless noted.
+</p>
+
+<table>
+<tr><th>               </th><th>Labial        </th><th>Dental      </th><th>Velar/Lateral</th></tr>
+<tr><td>Voiceless stop </td><td>&lt;p&gt;           </td><td>&lt;t&gt;         </td><td>&lt;k&gt;</td></tr>
+<tr><td>Voiced stop    </td><td>&lt;b&gt;           </td><td>&lt;d&gt;         </td><td>&lt;g&gt;</td></tr>
+<tr><td>Nasal          </td><td>&lt;m&gt;           </td><td>&lt;n&gt;         </td><td>&lt;ng&gt; [ŋ]</td></tr>
+<tr><td>Click          </td><td>&lt;p'&gt; [ʘ↑ʷ]    </td><td>&lt;t'&gt; [ǀ]    </td><td>&lt;k'&gt; [ǁ]</td></tr>
+<tr><td>Nasalized click</td><td>&lt;mp'&gt; [mʘ↑ʷ]  </td><td>&lt;nt'&gt; [nǀ]  </td><td>&lt;nk'&gt; [ŋǁ]</td></tr>
+<tr><td>Fricative      </td><td>&lt;f&gt;           </td><td>&lt;s&gt;         </td><td>&lt;lh&gt; [ɬ]</td></tr>
+<tr><td>Liquid         </td><td>&lt;w&gt;           </td><td>&lt;j&gt;         </td><td>&lt;l&gt;</td></tr>
+</table>
+
+<table>
+<tr><th>                </th><th>Front    </th><th>Central  </th><th>Back
+<tr><td>Close rounded   </td><td>&lt;y&gt;      </td><td>         </td><td>&lt;u&gt;</td></tr>
+<tr><td>Close unrounded </td><td>&lt;i&gt;      </td><td>         </td><td>&lt;v&gt; [ɯ]</td></tr>
+<tr><td>Mid             </td><td>&lt;e&gt;      </td><td>         </td><td>&lt;o&gt;</td></tr>
+<tr><td>Open            </td><td>         </td><td>&lt;a&gt;</td></tr>
+</table>
+
+<a name="phonotactics"></a>
+<h2>Phonotactics</h2>
+
+<p>
+Syllables take the form (C1)V(W)(C2), where W = [w] or [j], C2 cannot be [w] or [j]. [w] is prohibited before or after [u] and [y]; [j] prohibited before or after [i] and [y]. Identical vowels in hiatus and vowels in hiatus with [ɯ] <v> are prohibited within a word. A syllable ending in a click consonant cannot be followed by a syllable starting with a homorganic consonant.
+</p>
+
+<p>
+Stress is on final syllable if closed (including final [w]/[j]), on the penultimate syllable if the final syllable is open.
+</p>
+
+<p>
+<a href="http://akana.conlang.org/tools/awkwords/">Awkwords</a> generator (doesn't include prohibitions other than constraints on vowels before [w] and [j]):
+</p>
+
+<pre>
+V=a/e/i/o/u/v/y
+W=aw/aj/ej/oj/vj
+C=p/t/k/b/d/g/m/n/ng/p'/t'/k'/mp'/nt'/nk'/f/s/lh/w/j/l
+F=p/t/k/b/d/g/m/n/ng/p'/t'/k'/mp'/nt'/nk'/f/s/lh/l
+T=t/t/t/f/s/lh/w/j/l/m/n/ng////
+ (T)[V/V/W](F)((C)[V/V/W](F))
+</pre>
+
+<a name="morphology"></a>
+<h2>Morphology</h2>
+
+<h3>Nouns and adjectives</h3>
+
+<p>
+Sis has 3 noun classes, known as sun (characterized by &lt;t&gt;, &lt;e&gt;, &lt;i&gt;, &lt;j&gt;), earth (&lt;p&gt;, &lt;a&gt;, &lt;v&gt;, &lt;w&gt;), and moon (&lt;k&gt;, &lt;o&gt;, &lt;u&gt;, &lt;l&gt;). Among things in the animal kingdom, sun is generally the "most animate" class, used for most humans and animals seen to be intelligent, and moon is the "least animate" class, used for insects and other invertebrates. For non-animal words, noun class has a strong lightness (sun)-darkness (moon) component, although the class of many words is arbitrary. [edit: fixed cut-and-paste error]
+</p>
+
+<p>
+Nouns have 4 or 5 cases: absolutive (&lt;t&gt;), genitive (&lt;d&gt;), ergative (&lt;t'&gt;), dative (&lt;n&gt;), and possibly vocative (&lt;nt'&gt;). Whether vocative should be counted as a case rather than a nasal prefix attached to ergative-case nouns is disputed. Adjectives are identical in form when modifying ergative and vocative nouns; however, both a vocative and an ergative can be present in the same sentence.
+</p>
+
+<h4>Declension for stop initial</h4>
+
+<table>
+<tr><th>        </th><th>e.sg </th><th>e.pl  </th><th>s.sg </th><th>s.pl  </th><th>m.sg </th><th>m.pl </th><th>    </th></tr>
+<tr><th>abs</th><td>p-    </td><td>jap-   </td><td>t-    </td><td>jet-   </td><td>k -   </td><td>jok-  </td></tr>
+<tr><th>gen</th><td>b-    </td><td>jab-   </td><td>d-    </td><td>jed-   </td><td>g-    </td><td>jog-  </td></tr>
+<tr><th>erg</th><td>p'-   </td><td>jap'-  </td><td>t'-   </td><td>jet'-  </td><td>k'-   </td><td>jok'- </td></tr>
+<tr><th>dat</th><td>m-    </td><td>jam-   </td><td>n-    </td><td>jen-   </td><td>ng-   </td><td>jong- </td></tr>
+<tr><th>voc</th><td>mp'-  </td><td>jamp'- </td><td>nt'-  </td><td>jent'- </td><td>nk'-  </td><td>jonk'-</td><td> (*only for nouns; for adjectives voc=erg)</td></tr>
+</table>
+
+<table>
+<h4>Declension for vowel initial</h4>
+<tr><th>        </th><th>e.sg  </th><th>e.pl  </th><th>s.sg </th><th>s.pl  </th><th>m.sg </th><th>m.pl </th><th>   </th></tr>
+<tr><th>abs</th><td> Ø    </td><td>jap-   </td><td>Ø    </td><td>jet-   </td><td>Ø    </td><td>jok-</td></tr>
+<tr><th>gen</th><td> ab-   </td><td>jab-   </td><td>ed-   </td><td>jed-   </td><td>og-   </td><td>jog-</td></tr>
+<tr><th>erg</th><td> ap'-  </td><td>jap'-  </td><td>et'-  </td><td>jet'-  </td><td>ok'-  </td><td>jok'-</td></tr>
+<tr><th>dat</th><td> am-   </td><td>jam-   </td><td>en-   </td><td>jen-   </td><td>ong-  </td><td>jong-</td></tr>
+<tr><th>voc</th><td> amp'- </td><td>jamp'- </td><td>ent'- </td><td>jent'- </td><td>onk'- </td><td>jonk'- </td><td>(*) </td></tr>
+</table>
+
+<table>
+<h4>Declension for liquid/fricative initial</h4>
+<tr><th>        </th><th>e.sg  </th><th>e.pl  </th><th>s.sg </th><th>s.pl  </th><th>m.sg </th><th>m.pl </th></tr>
+<tr><th>abs</th><td> L-    </td><td>jaL-   </td><td>L-    </td><td>jeL-   </td><td>L-    </td><td>joL-</td></tr>
+<tr><th>gen</th><td> aL-   </td><td>jaL-   </td><td>eL-   </td><td>jeL-   </td><td>oL-   </td><td>joL-</td></tr>
+<tr><th>erg</th><td> aLL-  </td><td>jaLL-  </td><td>eLL-  </td><td>jeLL-  </td><td>oLL-  </td><td>joLL-</td></tr>
+<tr><th>dat</th><td> amL-  </td><td>jamL-  </td><td>enL-  </td><td>jenL-  </td><td>ongL- </td><td>jongL-</td></tr>
+<tr><th>voc</th><td colspan="6">(same as <strong>erg</strong>) </td></tr>
+</table>
+
+<table>
+<h4>Declension for nasal initial</h4>
+<tr><th>        </th><th>e.sg  </th><th>e.pl  </th><th>s.sg </th><th>s.pl  </th><th>m.sg </th><th>m.pl </th></tr>
+<tr><th>abs</th><td> N-    </td><td>jaN-   </td><td>N-    </td><td>jeN-   </td><td>N-    </td><td>joN-</td></tr>
+<tr><th>gen</th><td> aN-   </td><td>jaN-   </td><td>eN-   </td><td>jeN-   </td><td>oN-   </td><td>joN-</td></tr>
+<tr><th>erg</th><td> aNN-  </td><td>jaNN-  </td><td>eNN-  </td><td>jeNN-  </td><td>oNN-  </td><td>joNN-</td></tr>
+<tr><th>dat</th><td> awN-  </td><td>jawN-  </td><td>ejN-  </td><td>jejN-  </td><td>olN-  </td><td>jolN-</td></tr>
+<tr><th>voc</th><td colspan="6">(same as <strong>erg</strong>) </td></tr>
+</table>
+
+<p>
+Adjectives must start with t, f, s, lh, w, j, l, or a vowel. Possessed nouns are circumfixed with verb conjugation (below) of the possessor.
+</p>
+
+<h3>Verbs</h3>
+
+<p>
+Verb conjugation uses circumfixing. Verbs have past, present (nonpast realis), and subjunctive (irrealis) paradigms.
+</p>
+
+<table>
+<tr><th>          </th><th colspan="2">past</th><th colspan="2">pres</th><th colspan="2">subj</th><th>     </th></tr>
+<tr><td>    </td><th>sg</th><th>pl</th><th>sg</th><th>pl</th><th>sg</th><th>pl</th></tr>
+<tr><th>1ps</th><td>if~ </td><td>jef~  </td><td>fi~ </td><td>fi~ej  </td><td>fe~ </td><td>fe~ej</td></tr>
+<tr><th>(1pe)</th><td>vf~ </td><td>      </td><td>fv~ </td><td>       </td><td>fa~ </td></tr>
+<tr><th>2p</th><td>is~ </td><td>jes~  </td><td>si~ </td><td>si~ej  </td><td>se~ </td><td>se~ej</td></tr>
+<tr><th>3ps</th><td>~   </td><td>~ej   </td><td>i~  </td><td>i~ej   </td><td>e~  </td><td>e~ej</td></tr>
+<tr><th>3pe</th><td>~   </td><td>~aw   </td><td>v~  </td><td>v~aw   </td><td>a~  </td><td>a~aw</td></tr>
+<tr><th>3pm</th><td>~   </td><td>~ol   </td><td>u~  </td><td>u~ol   </td><td>o~  </td><td>o~ol</td></tr>
+</table>
+
+<p>
+Historically the sun conjugation was used as an honorific form for people, and earth as a humble form and to address equals and inferiors. This is the source of the most prominent dialectal difference between the two modern varieties of the language: modern Highland Sis uses the sun conjugation for all human subjects unless the subject is explicit and is one of the rare non-sun human words (e.g. <em>popngi</em>, pl. <em>japopngi</em> "uncle/aunt"), whereas Lowland Sis retains the use of the earth conjugation in the first person singular. This difference has become attached to feelings of political tension, with the Lowland speakers considering the Highland speakers rude and uncouth for using the sun conjugation for themselves, while the Highland speakers view demands to use the earth conjugation as a form of subjugation and part of a legacy of historical oppression.
+</p>
+
+<p>
+For transitive verbs, verb is first "declined" like an adjective (with the tables in Nouns, above) to agree with the absolutive patient, then circumfixed to agree with the ergative agent. Prefixes ending in a vowel add &lt;ng&gt; before verbs starting with identical vowel, or when one vowel is &lt;v&gt;, to prevent prohibited hiatus.
+</p>
+
+<p>
+Transitive verbs must start with one of the sounds allowed for adjectives.
+</p>
+
+<a name="syntax"></a>
+<h2>Syntax</h2>
+
+<p>
+Generally head-initial: VSO constituent order, prepositions, nouns before adjectives and relative clauses.
+</p>
+
+<p>
+Agreement is mandatory in noun class and number for most open-class words, and person for verbs. Adjectives agree with nouns, intransitive verbs agree with absolutive subject, transitive verbs agree with ergative agent, modals agree with ergative subject, followed by verb in subjunctive (also agrees).
+</p>
+
+<a name="lexicon"></a>
+<h2>Lexicon</h2>
+
+<h3>Pronouns</h3>
+
+<table>
+<tr><th>1ps  </th><td>tif</td>
+<tr><th>(1pe)</th><td>paf</td>
+<tr><th>2p   </th><td>tis</td>
+<tr><th>3pe  </th><td>palh</td>
+<tr><th>3ps  </th><td>tilh</td>
+<tr><th>3pm  </th><td>kulh</td>
+</table>
+
+<p>
+<em>pa</em> what<br>
+<em>ti</em> who<br>
+where<br>
+why<br>
+<em>lompa</em> when<br>
+</p>
+
+<h3>Nouns</h3>
+
+<p>
+<em>tin, jetin</em> sun<br>
+<em>kul, jokul</em> moon<br>
+<em>pam, *japam</em> earth<br>
+air<br>
+fire<br>
+<em>sv, *jasv</em> water<br>
+</p>
+
+<p>
+<em>majg, jamajg</em> mother<br>
+<em>tak', jetak'</em> father<br>
+<em>mama, jemama</em> mom(my)<br>
+<em>tata, jetata</em> dad(dy)<br>
+sibling<br>
+son/daughter<br>
+<em>popngi, japopngi</em> uncle/aunt<br>
+grandparent<br>
+</p>
+
+<p>
+<em>anip, jetanip</em> cat<br>
+<em>wonk'ed, jawonk'ed</em> donkey<br>
+<em>oawk, jetoawk</em> lion<br>
+</p>
+
+<p>
+<em>nek', jenek'</em> face<br>
+arm/hand<br>
+back<br>
+leg/foot<br>
+</p>
+
+<p>
+<em>mol, jomol</em> cup<br>
+<em>lhit'ilh, jolhit'ilh</em> knife<br>
+gun<br>
+</p>
+
+<p>
+<em>upp'y, *jokupp'y</em> milk<br>
+fruit<br>
+vegetable<br>
+<em>kusip, jokusip</em> meat<br>
+</p>
+
+<p>
+shirt/dress<br>
+<em>tip'ojg, jetip'ojg</em> hat<br>
+trousers<br>
+shoes/socks<br>
+</p>
+
+<p>
+<em>palwa, japalwa</em> house<br>
+door<br>
+room<br>
+<em>foj, jafoj</em> floor<br>
+</p>
+
+<p>
+<em>iaw, japiaw</em> tree<br>
+leaf<br>
+grain<br>
+flower<br>
+</p>
+
+<p>
+<em>ylep', *jetylep'</em> money<br>
+paper<br>
+</p>
+
+<p>
+<em>adi, jetadi</em> day<br>
+<em>kuldi, jokuldi</em> month<br>
+<em>oja, japoja</em> year<br>
+</p>
+
+<p>
+<em>lhvjp, jalhvjp language,</em> tongue<br>
+word<br>
+letter<br>
+</p>
+
+<p>
+<em>wik, jewik</em> person<br>
+<em>mint'</em> friend<br>
+leader<br>
+<em>sis</em> person belonging to Sis community<br>
+</p>
+
+<p>
+<em>emu, jokemu</em> god<br>
+ghost<br>
+</p>
+
+<h3>Adjectives</h3>
+
+<p>
+<em>su</em> this<br>
+<em>that</em> (near speaker)<br>
+<em>vk</em> yon<br>
+</p>
+
+<p>
+<em>fy</em> big<br>
+small<br>
+old (people)<br>
+young<br>
+old (things)<br>
+new<br>
+thin<br>
+<em>lhulu</em> wide/thick/(fat)<br>
+</p>
+
+<h3>Intransitive verbs</h3>
+
+<p>
+(with dat) enter<br>
+(with gen) leave<br>
+go<br>
+come<br>
+run<br>
+jump<br>
+swim<br>
+<em>lhunk'</em> sleep<br>
+live<br>
+<em>taob</em> die<br>
+</p>
+
+<p>
+<em>waw</em> (like gustar) be pleasant/like (with dat)<br>
+</p>
+
+<h3>Transitive verbs</h3>
+
+<p>
+cook<br>
+<em>lam</em> eat<br>
+<em>somp'</em> drink<br>
+grow/raise<br>
+</p>
+
+<p>
+<em>et'e</em> cut<br>
+hit<br>
+</p>
+
+<p>
+wear<br>
+<em>fvn</em> take off (clothing)<br>
+</p>
+
+<p>
+<em>tej</em> see<br>
+<em>ojnt'</em> hear<br>
+</p>
+
+<p>
+buy<br>
+sell<br>
+give<br>
+take<br>
+<em>nit</em> want<br>
+</p>
+
+<p>
+know<br>
+<em>waj</em> learn<br>
+understand<br>
+</p>
+
+<h3>Modals</h3>
+
+<p>
+<em>un</em> not<br>
+<em>vj</em> will<br>
+<em>tak</em> can<br>
+should<br>
+<em>tes</em> need/must<br>
+</p>
+
+<h3>Prepositions</h3>
+
+<p>
+<em>o</em> in/at<br>
+on<br>
+<em>ik</em> (with gen) from<br>
+around/about (topic)<br>
+between/among<br>
+through<br>
+with (com)<br>
+<em>jo</em> (with gen) with (instr)<br>
+</p>
+
+<h3>Conjunctions</h3>
+
+<p>
+<em>ne</em> and<br>
+or<br>
+but<br>
+<em>lu so,</em> then<br>
+</p>
+
+<p>
+<em>ang</em> if<br>
+<em>lom</em> when<br>
+<em>ant'</em> because<br>
+that/which (introducing relative clause)<br>
+<em>y</em> that (introducing subordinate clause)<br>
+</p>
+
+<a name="examples"></a>
+<h2>Example sentences</h2>
+
+<p>
+<em>Ingvj etaob ant' iun ewaw nilh esomp' sv.</em><br>
+[iŋɯj etaob anǀ iun ewaw niɬ esomʘ↑ʷ sɯ]<br>
+ing-vj e-taob ant' i-un e-waw nilh e-somp' sv<br>
+3SG.S-FUT 3SG.S.SUBJ-die because 3SG.S-not 3SG.S.SUBJ-like DAT\3sg.S 3SG.S.SUBJ-drink water<br>
+He's going to die because he doesn't like to drink water.
+</p>
+
+<p>
+<em>Lompa fitakej fejetejej jetanip jefy?</em><br>
+[lompa fitakej fejetejej jetanip jefy]<br>
+lompa fi-tak-ej fe-jet-ej-ej jet-anip je-fy<br>
+when? 1.S-can-S.PL 1.S.SUBJ-S.PL.PAT-see-S.PL S.PL-cat S.PL-big<br>
+When can we see the big cats?
+</p>
+
+<p>
+<em>Ifojnt' y ilamej jewwik o palwa vk vkusip awonk'ed.</em><br>
+[ifojnǀ y ilamej jewːik o palwa ɯk ɯkusip awoŋǁed]<br>
+if-ojnt' y i-lam-ej jew-wik o palwa vk v-kusip a-wonk'ed<br>
+1.S.PAST-hear SUB 3.S-eat-S.PL S.PL.ERG-person in house yonder 3SG.E.POSS-meat E.SG.GEN-donkey<br>
+I heard that the people in that house eat donkey meat.
+</p>
+
+<!--
+<h3>Selected lexicon items used for these sentences</h3>
+
+<table>
+<tr><th>Sis word</th><th>Definition</th></tr>
+<tr><td>*tilh* </td><td> he/she/it (3rd-person sun-class pronoun)  </td></tr>
+<tr><td>*lompa* </td><td> when?</td></tr>
+<tr><td> </td><td> </td></tr>
+<tr><td> *sv* pl. \**jasv* </td><td> water  </td></tr>
+<tr><td> *anip* pl. *jetanip* </td><td> cat  </td></tr>
+<tr><td> *wonk'ed* pl. *jawonk'ed* </td><td> donkey  </td></tr>
+<tr><td> *kusip* pl. \**jokusip* </td><td> meat  </td></tr>
+<tr><td> *palwa* pl. *japalwa* </td><td> house  </td></tr>
+<tr><td> *wik* pl. *jewik* </td><td> person</td></tr>
+<tr><td> </td><td> </td></tr>
+<tr><td> *vk* </td><td> that, yonder (distal demonstrative)  </td></tr>
+<tr><td> *fy* </td><td> big</td></tr>
+<tr><td> </td><td> </td></tr>
+<tr><td> *taob* </td><td> to die  </td></tr>
+<tr><td> *waw* </td><td> to be pleasant, to like (DAT likes ABS)  </td></tr>
+<tr><td> *somp'* </td><td> to drink  </td></tr>
+<tr><td> *tej* </td><td> to see  </td></tr>
+<tr><td> *ojnt'* </td><td> to hear</td></tr>
+<tr><td> </td><td> </td></tr>
+<tr><td> *un* </td><td> not (modal verb negation)  </td></tr>
+<tr><td> *vj* </td><td> will (modal verb future)  </td></tr>
+<tr><td> *tak* </td><td> can (modal verb capability)</td></tr>
+<tr><td> </td><td> </td></tr>
+<tr><td> *o* </td><td> in/at  </td></tr>
+<tr><td> *ant'* </td><td> because  </td></tr>
+<tr><td> *y* </td><td> that (introducing subordinate clause)</td></tr>
+</table>
+-->
+
+<p>
+<em>Ang sinit sewaj ilhvjpej jeSis, lu sites anis ilhvjp eSis.</em><br>
+[aŋ sinit sewaj iɬɯjpej jesis lu sites anis iɬɯjp esis]<br>
+ang si-nit se-waj i-lhvjp-ej je-Sis lu si-tes a-nis i-lhvjp e-Sis<br>
+if 2-want 2.SUBJ-learn 3.S.POSS-tongue-S.PL.POSS S.PL.GEN-Sis so 2-need 3.E.POSS-DAT\2sg 3.S.POSS-tongue 3SG.S.GEN-Sis<br>
+If you want to learn the Sis language, you need to have a Sis tongue.
+</p>
+
+<p>
+<em>Itak fitak' esomp' upp'y unjo omol ne epet'e kusip unjo olhit'ilh.</em><br>
+[itak fitaǁ esomʘ↑ʷ upʘ↑ʷy unjo omol ne epeǀe kusip unjo oɬiǀiɬ]<br>
+i-tak fi-tak' e-somp' upp'y unjo o-mol ne e-p-et'e kusip unjo o-lhit'ilh<br>
+3.S-can 1.S.POSS-father 3.S.SUBJ-drink milk without M.SG.GEN-cup and 3.S.SUBJ-M.SG.PAT-cut meat without M.SG.GEN-knife<br>
+My father can drink milk without a cup and cut meat without a knife.
+</p>
+
+<p>
+<a href="recording_1.mp3">Audio of the 5 example sentences (MP3, 320K)</a> (so you can hear me wrestle with the clicks)
+</p>
+
+        </div>
+    </body>
+</html>

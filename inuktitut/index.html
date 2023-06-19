@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8" />
+    <head>
+        <title>Syllabics Composer</title>
+        <link rel="stylesheet" href="style.css"></link>
+        <script src="https://cdn.jsdelivr.net/emojione/2.2.6/lib/js/emojione.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="compose.js"></script>
+    </head>
+    <body>
+        <div id="header"><h1 id="title">Syllabics Composer</h1></div>
+        <div id="content">
+            <h2>Composer</h2>
+            <p>Type phonetically in the text box. The text will be converted to syllabics below.</p>
+<textarea class="composer" id="compose1"></textarea>
+
+<div id="compose1_unicode"></div>
+
+<h3>How to use</h3>
+<blockquote>
+  <p><tt>nunavut</tt></p>
+  <p>ᓄᓇᕗᑦ</p>
+  <p><tt>uvannut uqaalaqujunnaqqiuk utiqqat?</tt></p>
+  <p>ᐅᕙᓐᓄᑦ ᐅᖄᓚᖁᔪᓐᓇᖅᕿᐅᒃ ᐅᑎᖅᖃᑦ?</p>
+</blockquote>
+<p>The -ai series can be typed with <tt>e</tt>: <tt>tememmat</tt> ᑌᒣᒻᒪᑦ.</p>
+<p>Consonants will attach to the following vowel in case of ambiguity. To
+push a consonant onto the previous syllable, mark the syllable break with
+a hyphen (-).</p>
+<p>Double L's are converted to the ł-series (ᖤ). They can be split with a hyphen:
+<tt>al-languak</tt> ᐊᓪᓚᖑᐊᒃ.</p>
+
+        </div>
+    </body>
+</html>

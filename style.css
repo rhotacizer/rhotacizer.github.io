@@ -1,0 +1,88 @@
+body {
+    font-family: Verdana, sans-serif;
+}
+
+h1 {
+    font-size: 140%; color: #a00;
+}
+h2 {
+    font-size: 130%;
+    color: #a00;
+    text-align: center;
+}
+h3 {
+    font-size: 120%; color: #a00;
+}
+
+a { color: #a00; }
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:active { text-decoration: none; }
+a:hover { text-decoration: none; color: #c44; }
+
+#header {
+    text-align: right;
+    position: absolute;
+    top: 0;
+    right: calc(100% - 10em);
+    width: 10em;
+}
+
+#content {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 11em;
+    width: 44em;
+    position: relative;
+}
+
+#logo {
+    width: 10em;
+    height: 10em;
+    border: 2px solid #fe0;
+    border-radius: 7px;
+}
+
+.caption {
+    font-size: 90%;
+    color: #a00;
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+}
+
+.link-grid {
+    list-style: none;
+    padding: 0;
+}
+
+.link-grid li {
+    display: inline-block;
+    padding: 1ex;
+    margin: 1ex;
+    border: 2px solid #ccc;
+    border-radius: 7px;
+    width: calc(50% - 4ex - 4px);
+    height: 10em;
+    vertical-align: top;
+}
+
+.link-box {
+    display: block;
+    height: 64px;
+    margin-bottom: 1ex;
+}
+
+.link-box p {
+    display: inline-block;
+    vertical-align: bottom;
+    margin: 0;
+    font-size: 120%;
+}
+
+.link-box img {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-right: 1ex;
+    width: 64px;
+    height: 64px;
+}

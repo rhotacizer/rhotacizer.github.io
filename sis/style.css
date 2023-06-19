@@ -1,0 +1,98 @@
+body {
+    font-family: serif;
+}
+
+h1 { font-size: 140%; color: #8bf; }
+h2 { font-size: 130%; color: green; }
+h3 { font-size: 120%; color: green; }
+
+a { color: green; }
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:active { text-decoration: none; }
+a:hover { text-decoration: none; color: #8bf; }
+
+#header {
+    text-align: center;
+}
+
+#flag {
+    width: 10em;
+    margin-bottom: 1ex;
+}
+
+#header, #content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+}
+
+#logo {
+    padding: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.pron {
+    font-style: italic;
+}
+
+tt .pron {
+    font-style: normal;
+}
+
+.vocab {
+    margin-left: auto;
+    margin-right: auto;
+    border-spacing: 1em 0;
+}
+
+.toc {
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-spacing: 1em 0;
+}
+
+.toc ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.toc td {
+    vertical-align: top;
+}
+
+.vocab td {
+    vertical-align: bottom;
+}
+
+.composer {
+    width: 100%;
+}
+
+.emojione {
+    width: 2em;
+    height: 2em;
+    display: inline-block;
+    margin-bottom: -0.25em;
+}
+
+.emoji {
+    width: 2em;
+    height: 2em;
+    display: inline-block;
+    margin-bottom: -0.25em;
+}
+
+.dict-pron-group {
+    margin: 0.5em 0 1em 0;
+    padding: 0 1em;
+    list-style-type: none;
+}
+
+.dict-chars-group {
+    list-style-type: disc;
+    padding: 0 32px;
+}

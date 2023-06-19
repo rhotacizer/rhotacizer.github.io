@@ -1,0 +1,99 @@
+body {
+    font-family: Verdana, sans-serif;
+}
+
+h1 { font-size: 140%; }
+h2 { font-size: 130%; }
+h3 { font-size: 120%; }
+
+a { color: #0044aa; }
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:active { text-decoration: none; }
+a:hover { text-decoration: none; color: #0088cc; }
+
+#header {
+    text-align: right;
+    display: table;
+}
+
+#header, #content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+}
+
+#logo {
+    padding: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#title {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.pron {
+    font-style: italic;
+}
+
+tt .pron {
+    font-style: normal;
+}
+
+.vocab {
+    margin-left: auto;
+    margin-right: auto;
+    border-spacing: 1em 0;
+}
+
+.toc {
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-spacing: 1em 0;
+}
+
+.toc ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.toc td {
+    vertical-align: top;
+}
+
+.vocab td {
+    vertical-align: bottom;
+}
+
+.composer {
+    width: 100%;
+}
+
+.emojione {
+    width: 2em;
+    height: 2em;
+    display: inline-block;
+    margin-bottom: -0.25em;
+}
+
+.emoji {
+    width: 2em;
+    height: 2em;
+    display: inline-block;
+    margin-bottom: -0.25em;
+}
+
+.dict-pron-group {
+    margin: 0.5em 0 1em 0;
+    padding: 0 1em;
+    list-style-type: none;
+}
+
+.dict-chars-group {
+    list-style-type: disc;
+    padding: 0 32px;
+}
